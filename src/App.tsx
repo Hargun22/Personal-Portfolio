@@ -1,24 +1,37 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React, { useEffect, useState } from "react";
+import Dots from "./components/Dots";
+import Navbar from "./components/Navbar";
+import useMediaQuery from "./hooks/useMediaQuery";
 
 function App() {
+  const [selectedPage, setSelectedPage] = useState("home");
+  const isAboveMediumScreen = useMediaQuery("(min-width: 1060px)");
+  const [isTopOfPage, setIsTopOfPage] = useState(true);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      if (window.scrollY === 0) {
+        setIsTopOfPage(true);
+      } else {
+        setIsTopOfPage(false);
+      }
+    };
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className="app bg-deep-blue">
+      <Navbar
+        isTopOfPage={isTopOfPage}
+        selectedPage={selectedPage}
+        setSelectedPage={setSelectedPage}
+      />
+      <div className="w-5/6 mx-auto md:h-full">
+        {isAboveMediumScreen && (
+          <Dots selectedPage={selectedPage} setSelectedPage={setSelectedPage} />
+        )}
+      </div>
     </div>
   );
 }
