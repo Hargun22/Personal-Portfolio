@@ -10,6 +10,7 @@ interface LinkProps extends Link {
 const NavBarLink = ({ page, selectedPage, setSelectedPage }: LinkProps) => {
   const lowerCasePage = page.toLowerCase();
   const isAboveSmallScreen = useMediaQuery("(min-width: 768px)");
+  console.log(selectedPage);
   return (
     <AnchorLink
       className={`${

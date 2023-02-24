@@ -25,7 +25,7 @@ const Dots = ({ selectedPage, setSelectedPage }: DotProps) => {
           w-3 h-3 rounded-full`}
           href={`#${lowerCaseHelper(link.page)}`}
           onClick={() => setSelectedPage(link.page)}
-        ></AnchorLink>
+        />
       ))}
     </div>
   );
