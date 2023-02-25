@@ -8,6 +8,11 @@ type SkillsProps = {
   setSelectedPage: React.Dispatch<React.SetStateAction<string>>;
 };
 
+const variants = {
+  hidden: { opacity: 0 },
+  visible: { opacity: 1 },
+};
+
 const Skills = ({ setSelectedPage }: SkillsProps) => {
   const { height, width } = useWindowDimensions();
   const isAboveSmallScreen = useMediaQuery("(min-width: 768px)");
@@ -33,11 +38,20 @@ const Skills = ({ setSelectedPage }: SkillsProps) => {
 
   return (
     <section ref={ref} id="skills" className="mb-9">
-      <div className="m-10 sm:m-16 md:m-24 flex flex-col justify-center">
+      <motion.div
+        initial="hidden"
+        whileInView="visible"
+        viewport={{ once: true }}
+        transition={{ duration: 1 }}
+        variants={variants}
+        className="m-10 sm:m-16 md:m-24 flex flex-col justify-center"
+      >
         <div className="justify-center ">
-          <h1 className="text-6xl font-bold text-center">My Skills</h1>
+          <h1 className="text-4xl xs:text-6xl font-bold text-center">
+            My Skills
+          </h1>
         </div>
-        <h1 className="text-[16px] sm:text-xl font-bold text-center text-gray-400 my-5">
+        <h1 className="text-[14px] xs:text-xl font-bold text-center text-gray-400 my-5">
           These are the languages, technologies and tools I have experience
           using.
         </h1>
@@ -58,7 +72,7 @@ const Skills = ({ setSelectedPage }: SkillsProps) => {
             </div>
           ))}
         </div>
-      </div>
+      </motion.div>
     </section>
   );
 };

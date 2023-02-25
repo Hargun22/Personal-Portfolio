@@ -5,12 +5,28 @@ import { links } from "../data";
 import { IoIosMenu } from "react-icons/io";
 import { IoClose } from "react-icons/io5";
 import NavBarLink from "./NavBarLink";
+import { AnimatePresence, motion, useCycle } from "framer-motion";
 
 interface NavbarProps {
   isTopOfPage: boolean;
   selectedPage: string;
   setSelectedPage: React.Dispatch<React.SetStateAction<string>>;
 }
+
+const sideVariants = {
+  closed: {
+    transition: {
+      staggerChildren: 0.2,
+      staggerDirection: -1,
+    },
+  },
+  open: {
+    transition: {
+      staggerChildren: 0.2,
+      staggerDirection: 1,
+    },
+  },
+};
 
 const Navbar = ({
   isTopOfPage,
@@ -47,28 +63,42 @@ const Navbar = ({
           </button>
         )}
         {/* Mobile NAV */}
-        {!isAboveSmallScreen && isMenuToggled && (
-          <div className="fixed right-0 bottom-0 h-full bg-blue w-[250px]">
-            <div className="flex justify-end p-8">
-              <button
-                className="px-6"
-                onClick={() => setIsMenuToggled(!isMenuToggled)}
+        <AnimatePresence>
+          {!isAboveSmallScreen && isMenuToggled && (
+            <motion.div
+              initial={{ width: 0 }}
+              animate={{ width: 250 }}
+              transition={{ duration: 0.5 }}
+              exit={{ x: 40, width: 0, transition: { duration: 0.2 } }}
+              className="fixed right-0 bottom-0 h-full bg-blue w-[250px]"
+            >
+              <div className="flex justify-end p-8">
+                <button
+                  className="px-6"
+                  onClick={() => setIsMenuToggled(!isMenuToggled)}
+                >
+                  <IoClose size={30} />
+                </button>
+              </div>
+              <motion.div
+                initial="closed"
+                animate="open"
+                exit="closed"
+                variants={sideVariants}
+                className="flex flex-col gap-10 ml-[33%] text-2xl text-deep-blue"
               >
-                <IoClose size={30} />
-              </button>
-            </div>
-            <div className="flex flex-col gap-10 ml-[33%] text-2xl text-deep-blue">
-              {links.map((link) => (
-                <NavBarLink
-                  key={link.page}
-                  page={link.page}
-                  selectedPage={selectedPage}
-                  setSelectedPage={setSelectedPage}
-                />
-              ))}
-            </div>
-          </div>
-        )}
+                {links.map((link) => (
+                  <NavBarLink
+                    key={link.page}
+                    page={link.page}
+                    selectedPage={selectedPage}
+                    setSelectedPage={setSelectedPage}
+                  />
+                ))}
+              </motion.div>
+            </motion.div>
+          )}
+        </AnimatePresence>
       </div>
     </nav>
   );

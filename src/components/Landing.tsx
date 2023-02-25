@@ -47,7 +47,7 @@ const Landing = ({ setSelectedPage }: LandingProps) => {
     <section
       ref={ref}
       id="home"
-      className="justify-center flex md:justify-start pt-48 pb-10"
+      className="justify-center flex md:justify-start sm:pt-10"
     >
       <motion.div
         initial="hidden"
@@ -55,7 +55,7 @@ const Landing = ({ setSelectedPage }: LandingProps) => {
         viewport={{ once: true }}
         transition={{ staggerChildren: 0.4, duration: 0.1 }}
         variants={landingVariants}
-        className="sm:w-3/4 md:w-5/6"
+        className="justify-center"
       >
         <motion.h4
           className=" text-gray-300 px-1 text-[15px] md:text-[25px] md:py-4 py-2"
@@ -73,7 +73,7 @@ const Landing = ({ setSelectedPage }: LandingProps) => {
         </motion.h1>
 
         <motion.h2
-          className="text-4xl sm:text-6xl md:text-7xl font-bold text-gray-300 md:py-10 py-5"
+          className="text-3xl sm:text-6xl md:text-7xl font-bold text-gray-300 md:py-10 py-5"
           variants={landingVariants}
           transition={{ duration: 0.4 }}
         >
