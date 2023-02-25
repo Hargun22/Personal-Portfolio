@@ -32,8 +32,8 @@ const Skills = ({ setSelectedPage }: SkillsProps) => {
   }, []);
 
   return (
-    <section ref={ref} id="skills" className="w-full">
-      <div className="p-10 sm:p-16 md:p-24 flex flex-col justify-center">
+    <section ref={ref} id="skills" className="mb-9">
+      <div className="m-10 sm:m-16 md:m-24 flex flex-col justify-center">
         <div className="justify-center ">
           <h1 className="text-6xl font-bold text-center">My Skills</h1>
         </div>
@@ -43,7 +43,7 @@ const Skills = ({ setSelectedPage }: SkillsProps) => {
         </h1>
         <div className="flex flex-wrap justify-evenly">
           {skills.map((skill) => (
-            <div className="m-10">
+            <div className="m-5 sm:m-10">
               <div className="flex justify-center">
                 <img
                   src={skill.src}

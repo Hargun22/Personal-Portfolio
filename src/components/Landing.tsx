@@ -47,12 +47,12 @@ const Landing = ({ setSelectedPage }: LandingProps) => {
     <section
       ref={ref}
       id="home"
-      className="justify-center flex md:justify-start h-full py-48 "
+      className="justify-center flex md:justify-start pt-48 pb-10"
     >
       <motion.div
         initial="hidden"
         whileInView="visible"
-        viewport={{ once: true, amount: 0.5 }}
+        viewport={{ once: true }}
         transition={{ staggerChildren: 0.4, duration: 0.1 }}
         variants={landingVariants}
         className="sm:w-3/4 md:w-5/6"

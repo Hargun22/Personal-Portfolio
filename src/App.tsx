@@ -6,6 +6,7 @@ import Landing from "./components/Landing";
 import Line from "./components/Line";
 import Skills from "./components/Skills";
 import { motion, useInView } from "framer-motion";
+import Projects from "./components/Projects";
 
 function App() {
   const [selectedPage, setSelectedPage] = useState("home");
@@ -43,7 +44,7 @@ function App() {
         selectedPage={selectedPage}
         setSelectedPage={setSelectedPage}
       />
-      <div className="w-5/6 mx-auto h-full">
+      <div className="w-5/6 mx-auto min-h-full">
         {isAboveMediumScreen && (
           <Dots selectedPage={selectedPage} setSelectedPage={setSelectedPage} />
         )}
@@ -52,9 +53,15 @@ function App() {
         </motion.div>
       </div>
       <Line />
-      <div className="w-5/6 mx-auto h-full">
+      <div className="w-5/6 mx-auto min-h-full">
         <motion.div>
           <Skills setSelectedPage={setSelectedPage} />
+        </motion.div>
+      </div>
+      <Line />
+      <div className="w-5/6 mx-auto min-h-full">
+        <motion.div>
+          <Projects setSelectedPage={setSelectedPage} />
         </motion.div>
       </div>
     </div>
