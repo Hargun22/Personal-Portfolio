@@ -56,8 +56,8 @@ const Projects = ({ setSelectedPage }: ProjectProps) => {
   };
 
   return (
-    <section id="projects" ref={ref}>
-      <div className="m-6 md:m-18 lg:m-24 flex flex-col justify-center">
+    <section ref={ref}>
+      <div className="py-16 p-10 md:p-20 lg:p-24 flex flex-col justify-center">
         <div className="justify-center ">
           <h1 className="text-4xl xs:text-6xl font-bold text-center">
             Projects

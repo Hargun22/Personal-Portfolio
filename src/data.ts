@@ -1,5 +1,3 @@
-import { SiJava, SiPython } from "react-icons/si";
-
 export type Link = {
   page: string;
 };
@@ -113,7 +111,6 @@ export const projects: Project[] = [
     name: "AZ-Shopping",
     description: [
       "A full stack e-commerce website built using a microservice architecture, with a heavy focus on the backend",
-      "Created key services such as user, authentication, product, cart, order and payment.",
       "Deployed the backend using AWS Elastic Beanstalk and Docker.",
     ],
 
@@ -124,67 +121,83 @@ export const projects: Project[] = [
       "JWT Authentication",
       "HTML",
       "Styled Components",
+      "JavaScript",
       "React",
       "Redux",
       "AWS S3",
-      "AWS Elastic Beanstalk",
+      "AWS EB",
       "Nginx",
       "Docker",
     ],
     github: "https://github.com/Hargun22/az-shopping",
     image:
-      "https://hb-portfolio-bucket.s3.us-east-2.amazonaws.com/Screen+Shot+2023-02-21+at+6.35.10+PM.png",
+      "https://hb-portfolio-bucket.s3.us-east-2.amazonaws.com/AZ-shopping.png",
   },
   {
     name: "Boardzilla",
     description: [
-      "A full stack e-commerce website built using a microservice architecture, with a heavy focus on the backend",
-      "Created key services such as user, authentication, product, cart, order and payment.",
-      "Deployed the backend using AWS Elastic Beanstalk and Docker.",
-    ],
-
-    stack: ["Node", "Express", "MongoDB", "HTML", "CSS", "React", "Redux"],
-    github: "https://github.com/Hargun22/az-shopping",
-    image:
-      "https://hb-portfolio-bucket.s3.us-east-2.amazonaws.com/Screen+Shot+2023-02-21+at+6.35.10+PM.png",
-  },
-  {
-    name: "AZ-Shopping",
-    description: [
-      "A full stack e-commerce website built using a microservice architecture, with a heavy focus on the backend",
-      "Created key services such as user, authentication, product, cart, order and payment.",
-      "Deployed the backend using AWS Elastic Beanstalk and Docker.",
+      "A dashboard style website allowing users to add multiple widgets like Weather, Stocks, Calendar, News, and Sticky notes to their custom dashboard",
+      "Implemented drag, drop and resizing functionality",
+      "Implemented Sticky notes widget end-to-end",
     ],
 
     stack: [
       "Node",
       "Express",
       "MongoDB",
-      "JWT Authentication",
       "HTML",
-      "Styled Components",
+      "CSS",
+      "JavaScript",
       "React",
       "Redux",
-      "AWS S3",
-      "AWS Elastic Beanstalk",
-      "Nginx",
-      "Docker",
     ],
-    github: "https://github.com/Hargun22/az-shopping",
+    github: "https://github.com/Hargun22/Boardzilla-Fixed",
     image:
-      "https://hb-portfolio-bucket.s3.us-east-2.amazonaws.com/Screen+Shot+2023-02-21+at+6.35.10+PM.png",
+      "https://hb-portfolio-bucket.s3.us-east-2.amazonaws.com/Boardzilla.png",
   },
   {
-    name: "Boardzilla",
+    name: "Mini Uber Eats Clone",
     description: [
-      "A full stack e-commerce website built using a microservice architecture, with a heavy focus on the backend",
-      "Created key services such as user, authentication, product, cart, order and payment.",
-      "Deployed the backend using AWS Elastic Beanstalk and Docker.",
+      "Developed an Uber Eats inspired food delivery app that allows users to search nearby restaurants and add items to their cart using Yelp API.",
+      "Focused primarily on the frontend using React Native and Google Maps API.",
     ],
 
-    stack: ["Node", "Express", "MongoDB", "HTML", "CSS", "React", "Redux"],
-    github: "https://github.com/Hargun22/az-shopping",
+    stack: [
+      "React Native",
+      "HTML",
+      "CSS",
+      "JavaScript",
+      "Firebase",
+      "Yelp API",
+      "Google Maps API",
+    ],
+    github: "https://github.com/Hargun22/Uber-Eats-Clone",
     image:
-      "https://hb-portfolio-bucket.s3.us-east-2.amazonaws.com/Screen+Shot+2023-02-21+at+6.35.10+PM.png",
+      "https://hb-portfolio-bucket.s3.us-east-2.amazonaws.com/Uber+Eats.jpg",
+  },
+  {
+    name: "BillRemind App",
+    description: [
+      "iOS app that lets users setup reminders for recurring bills or activities.",
+      "Allows for daily, bi-weekly, weekly, monthly, semi-annually, and yearly reminders.",
+      "Over 3000 downloads on the App Store.",
+    ],
+
+    stack: ["Swift", "XCode"],
+    github: "https://github.com/Hargun22/BillRemind",
+    image:
+      "https://hb-portfolio-bucket.s3.us-east-2.amazonaws.com/BillRemind.jpg",
+  },
+  {
+    name: "Reddit.Web",
+    description: [
+      "A web tool for visualizing the connections between subreddits using hyperlink connections data",
+      "Utilized object-oriented programming and graphing algorithms to traverse and represent 850,000+ nodes",
+    ],
+
+    stack: ["Java", "HTML", "CSS", "JavaScript"],
+    github: "https://github.com/Hargun22/Reddit.Web",
+    image:
+      "https://hb-portfolio-bucket.s3.us-east-2.amazonaws.com/Reddit.Web.png",
   },
 ];

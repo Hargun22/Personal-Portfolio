@@ -17,18 +17,11 @@ const itemVariants = {
 const NavBarLink = ({ page, selectedPage, setSelectedPage }: LinkProps) => {
   const lowerCasePage = page.toLowerCase();
   const isAboveSmallScreen = useMediaQuery("(min-width: 768px)");
-  console.log(selectedPage);
   return (
     <AnimatePresence>
       <motion.div variants={itemVariants}>
         <AnchorLink
-          className={`${
-            selectedPage === lowerCasePage
-              ? isAboveSmallScreen
-                ? "text-blue"
-                : "text-white"
-              : ""
-          } 
+          className={`${selectedPage === lowerCasePage ? "text-blue" : ""} 
           hover:text-blue transition duration-300
           `}
           href={`#${lowerCasePage}`}

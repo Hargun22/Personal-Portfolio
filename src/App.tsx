@@ -10,12 +10,10 @@ import Projects from "./components/Projects";
 import Contact from "./components/Contact";
 
 function App() {
-  const [selectedPage, setSelectedPage] = useState("home");
+  const [selectedPage, setSelectedPage] = useState<string>("home");
   const isAboveMediumScreen = useMediaQuery("(min-width: 1060px)");
-  const [isTopOfPage, setIsTopOfPage] = useState(true);
-  const home = useRef(null);
-  //const isHomeInView = useInView(home);
-  //const isSkillsInView = useInView(skills);
+  const [isTopOfPage, setIsTopOfPage] = useState<boolean>(true);
+  const home = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -29,15 +27,6 @@ function App() {
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
-  // useEffect(() => {
-  //   if (isHomeInView) {
-  //     console.log(home);
-  //     setSelectedPage("home");
-  //   } else if (isSkillsInView) {
-  //     setSelectedPage("skills");
-  //   }
-  // }, [isHomeInView, isSkillsInView]);
-
   return (
     <div className="app bg-deep-blue">
       <Navbar
@@ -45,7 +34,10 @@ function App() {
         selectedPage={selectedPage}
         setSelectedPage={setSelectedPage}
       />
-      <div className="mt-12 w-5/6 mx-auto min-h-full flex items-center justify-center md:justify-start">
+      <div
+        id="home"
+        className="pt-12 w-5/6 mx-auto min-h-full flex items-center justify-center md:justify-start"
+      >
         {isAboveMediumScreen && (
           <Dots selectedPage={selectedPage} setSelectedPage={setSelectedPage} />
         )}
@@ -54,19 +46,19 @@ function App() {
         </motion.div>
       </div>
       <Line />
-      <div className="w-full sm:w-5/6 mx-auto min-h-full">
+      <div className="w-full sm:w-5/6 mx-auto min-h-full" id="skills">
         <motion.div>
           <Skills setSelectedPage={setSelectedPage} />
         </motion.div>
       </div>
       <Line />
-      <div className="w-full xs:w-5/6 mx-auto min-h-[90vh]">
+      <div id="projects" className="w-full xs:w-5/6 mx-auto min-h-[90vh]">
         <motion.div>
           <Projects setSelectedPage={setSelectedPage} />
         </motion.div>
       </div>
       <Line />
-      <div className="w-full xs:w-5/6 mx-auto min-h-[90vh]">
+      <div id="contact" className="w-full xs:w-5/6 mx-auto min-h-[90vh]">
         <motion.div>
           <Contact setSelectedPage={setSelectedPage} />
         </motion.div>

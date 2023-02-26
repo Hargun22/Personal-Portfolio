@@ -60,14 +60,14 @@ const Contact = ({ setSelectedPage }: ContactProps) => {
         viewport={{ once: true }}
         transition={{ duration: 1 }}
         variants={variants}
-        className="m-10 sm:m-16 md:m-24 flex flex-col justify-center"
+        className="py-16 p-12 sm:p-16 md:p-24 flex flex-col justify-center"
       >
         <div className="justify-center">
           <h1 className="text-3xl xs:text-4xl md:text-6xl font-bold text-center">
             Get in touch!
           </h1>
         </div>
-        <div className="flex flex-col justify-between  mt-5">
+        <div className="flex flex-col justify-between sm:mt-5">
           <motion.div
             initial="hidden"
             whileInView="visible"
@@ -87,7 +87,7 @@ const Contact = ({ setSelectedPage }: ContactProps) => {
               className="flex flex-col justify-center items-center text-white"
             >
               <input
-                className="w-5/6 bg-slate-400/20 font-semibold p-3 mt-10"
+                className="w-5/6 bg-slate-400/20 font-semibold p-3"
                 type="text"
                 placeholder="Enter your name"
                 {...register("name", { required: true, maxLength: 100 })}
@@ -132,7 +132,7 @@ const Contact = ({ setSelectedPage }: ContactProps) => {
                     "Message too long. Max length is 2000 characters."}
                 </p>
               )}
-              <input type="hidden" name="_next" value=""></input>
+              <input type="hidden" name="_captcha" value="false"></input>
               <button
                 type="submit"
                 className="p-5 bg-blue rounded-full hover:bg-slate-400/20  transition duration-300 mt-10"

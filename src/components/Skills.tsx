@@ -37,14 +37,14 @@ const Skills = ({ setSelectedPage }: SkillsProps) => {
   }, []);
 
   return (
-    <section ref={ref} id="skills" className="mb-9">
+    <section ref={ref} className="mb-9">
       <motion.div
         initial="hidden"
         whileInView="visible"
         viewport={{ once: true }}
         transition={{ duration: 1 }}
         variants={variants}
-        className="m-10 sm:m-16 md:m-24 flex flex-col justify-center"
+        className="py-16 md:py-24 p-12 sm:p-20 md:p-24 flex flex-col justify-center"
       >
         <div className="justify-center ">
           <h1 className="text-4xl xs:text-6xl font-bold text-center">

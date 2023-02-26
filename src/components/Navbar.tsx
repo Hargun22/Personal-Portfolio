@@ -6,6 +6,7 @@ import { IoIosMenu } from "react-icons/io";
 import { IoClose } from "react-icons/io5";
 import NavBarLink from "./NavBarLink";
 import { AnimatePresence, motion, useCycle } from "framer-motion";
+import AnchorLink from "react-anchor-link-smooth-scroll";
 
 interface NavbarProps {
   isTopOfPage: boolean;
@@ -38,9 +39,11 @@ const Navbar = ({
   const navbarBackground = isTopOfPage ? "" : "bg-deep-blue";
 
   return (
-    <nav className={`${navbarBackground} z-40 w-full fixed top-0 py-6`}>
+    <nav className={`${navbarBackground} z-40 w-full fixed top-0 py-3 sm:py-6`}>
       <div className="flex items-center justify-between mx-auto w-5/6">
-        <h4 className="font-playfair text-3xl font-bold">HB</h4>
+        <AnchorLink href={`#home`} onClick={() => setSelectedPage("home")}>
+          <h4 className="font-playfair text-3xl font-bold">HB</h4>
+        </AnchorLink>
 
         {/* Desktop NAV */}
         {isAboveSmallScreen ? (
@@ -70,7 +73,7 @@ const Navbar = ({
               animate={{ width: 250 }}
               transition={{ duration: 0.5 }}
               exit={{ x: 40, width: 0, transition: { duration: 0.2 } }}
-              className="fixed right-0 bottom-0 h-full bg-blue w-[250px]"
+              className="fixed right-0 bottom-0 h-full bg-[#6a6a6a] w-[250px]"
             >
               <div className="flex justify-end p-8">
                 <button
@@ -85,7 +88,7 @@ const Navbar = ({
                 animate="open"
                 exit="closed"
                 variants={sideVariants}
-                className="flex flex-col gap-10 ml-[33%] text-2xl text-deep-blue"
+                className="flex flex-col gap-10 ml-[33%] text-2xl"
               >
                 {links.map((link) => (
                   <NavBarLink
