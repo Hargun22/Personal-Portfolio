@@ -44,7 +44,7 @@ const Skills = ({ setSelectedPage }: SkillsProps) => {
         viewport={{ once: true }}
         transition={{ duration: 1 }}
         variants={variants}
-        className="py-16 md:py-24 p-12 sm:p-20 md:p-24 flex flex-col justify-center"
+        className="py-16 p-12 sm:p-20 md:p-24 flex flex-col justify-center"
       >
         <div className="justify-center ">
           <h1 className="text-4xl xs:text-6xl font-bold text-center">

@@ -20,7 +20,6 @@ const buttonVariants = {
 };
 
 const Landing = ({ setSelectedPage }: LandingProps) => {
-  const isAboveMediumcreen = useMediaQuery("(min-width: 1060px)");
   const { height, width } = useWindowDimensions();
 
   const ref = useRef<HTMLElement>(null);
@@ -46,7 +45,6 @@ const Landing = ({ setSelectedPage }: LandingProps) => {
   return (
     <section
       ref={ref}
-      id="home"
       className="justify-center flex md:justify-start sm:pt-10"
     >
       <motion.div
@@ -85,7 +83,7 @@ const Landing = ({ setSelectedPage }: LandingProps) => {
           transition={{ duration: 0.4 }}
         >
           <p className="text-[12px] sm:text-[17px] md:text-[25px] font-bold text-gray-500">
-            Checkout my projects and the technologies I have worked with below!
+            Check out my projects and the technologies I have worked with below!
           </p>
         </motion.div>
         <motion.div

@@ -65,7 +65,7 @@ const Card = ({ project, current, cardKey }: CardProps) => {
         <motion.h1
           variants={variants}
           transition={{ duration: 0.5 }}
-          className="text-2xl sm:text-3xl font-bold text-center"
+          className="text-3xl md:text-4xl font-bold text-center"
         >
           {project.name}
         </motion.h1>
@@ -80,7 +80,7 @@ const Card = ({ project, current, cardKey }: CardProps) => {
           <motion.p
             variants={variants}
             transition={{ duration: 0.5 }}
-            className="text-[9px] xs:text-[12px] sm:text-[15px]"
+            className="text-[10px] xs:text-[13px] sm:text-[16px]"
           >{`- ${desc}`}</motion.p>
         ))}
 
@@ -92,9 +92,9 @@ const Card = ({ project, current, cardKey }: CardProps) => {
             <motion.div
               variants={variants3}
               transition={{ duration: 0.2 }}
-              className="bg-[#747474] p-1.5 m-0.5 sm:p-2.5 sm:m-1.5 rounded-full"
+              className="bg-[#747474] p-2 m-[3px] sm:p-2.5 sm:m-1.5 rounded-full"
             >
-              <h4 className="text-[7px] xs:text-[9px]  sm:text-[11px] text-[#c3c3c3]">
+              <h4 className="text-[8px] xs:text-[10px]  sm:text-[12px] text-[#c3c3c3]">
                 {s}
               </h4>
             </motion.div>
