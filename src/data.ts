@@ -173,7 +173,7 @@ export const projects: Project[] = [
       "Redux",
       "HTML",
       "Tailwind",
-      "JavaScript",
+      "TypeScript",
     ],
     github: "https://github.com/Hargun22/Indeed-Scraper",
     image: "https://hb-portfolio-bucket.s3.us-east-2.amazonaws.com/Indeed.png",
