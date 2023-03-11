@@ -52,6 +52,10 @@ export const skills: Skill[] = [
     src: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/express/express-original.svg",
   },
   {
+    name: "Flask",
+    src: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/flask/flask-original.svg",
+  },
+  {
     name: "Swift",
     src: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/swift/swift-original.svg",
   },
@@ -154,6 +158,25 @@ export const projects: Project[] = [
     github: "https://github.com/Hargun22/Boardzilla-Fixed",
     image:
       "https://hb-portfolio-bucket.s3.us-east-2.amazonaws.com/Boardzilla.png",
+  },
+  {
+    name: "Indeed Keyword Scraper",
+    description: [
+      "A web scraper that scrapes Indeed for jobs matching a given keyword and location",
+      "Developed a REST API using Flask and used BeautifulSoup to scrape Indeed",
+    ],
+    stack: [
+      "Python",
+      "Flask",
+      "BeautifulSoup",
+      "React",
+      "Redux",
+      "HTML",
+      "Tailwind",
+      "JavaScript",
+    ],
+    github: "https://github.com/Hargun22/Indeed-Scraper",
+    image: "https://hb-portfolio-bucket.s3.us-east-2.amazonaws.com/Indeed.png",
   },
   {
     name: "Mini Uber Eats Clone",
