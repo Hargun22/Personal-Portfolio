@@ -100,6 +100,10 @@ export const skills: Skill[] = [
     name: "Docker",
     src: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/docker/docker-original.svg",
   },
+  {
+    name: "Jenkins",
+    src: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/jenkins/jenkins-original.svg",
+  },
 ];
 
 export type Project = {
@@ -122,7 +126,9 @@ export const projects: Project[] = [
       "Node",
       "Express",
       "MongoDB",
-      "JWT Authentication",
+      "PostgreSQL",
+      "Jenkins",
+      "JWT",
       "HTML",
       "Styled Components",
       "JavaScript",
