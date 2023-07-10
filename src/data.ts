@@ -56,6 +56,10 @@ export const skills: Skill[] = [
     src: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/flask/flask-original.svg",
   },
   {
+    name: "Spring Boot",
+    src: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/spring/spring-original-wordmark.svg",
+  },
+  {
     name: "Swift",
     src: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/swift/swift-original.svg",
   },
@@ -95,6 +99,14 @@ export const skills: Skill[] = [
   {
     name: "AWS",
     src: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/amazonwebservices/amazonwebservices-original.svg",
+  },
+  {
+    name: "PyTorch",
+    src: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/pytorch/pytorch-original.svg",
+  },
+  {
+    name: "NumPy",
+    src: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/numpy/numpy-original.svg",
   },
   {
     name: "Docker",
@@ -144,6 +156,28 @@ export const projects: Project[] = [
       "https://hb-portfolio-bucket.s3.us-east-2.amazonaws.com/AZ-shopping.png",
   },
   {
+    name: "Waste Segregation Classifier",
+    description: [
+      "Deployed a convolutional neural network model based on the ResNet50 architecture to help users segregate waste into the correct bins",
+      "Trained on a dataset of 15000 images of 12 different classes of waste with an accuracy of 90%+ on the validation set",
+    ],
+
+    stack: [
+      "Python",
+      "PyTorch",
+      "NumPy",
+      "Matplotlib",
+      "Flask",
+      "HTML",
+      "JavaScript",
+      "React",
+      "Tailwind",
+    ],
+    github: "https://github.com/Hargun22/Waste-Segregation",
+    image:
+      "https://hb-portfolio-bucket.s3.us-east-2.amazonaws.com/Waste+Seg.png",
+  },
+  {
     name: "Boardzilla",
     description: [
       "A dashboard style website allowing users to add multiple widgets like Weather, Stocks, Calendar, News, and Sticky notes to their custom dashboard",
@@ -164,6 +198,28 @@ export const projects: Project[] = [
     github: "https://github.com/Hargun22/Boardzilla-Fixed",
     image:
       "https://hb-portfolio-bucket.s3.us-east-2.amazonaws.com/Boardzilla.png",
+  },
+  {
+    name: "Personal blog",
+    description: [
+      "A personal blog website built using Spring Boot and Hibernate ORM and deployed using AWS Elastic Beanstalk",
+      "Implemented CRUD operations for blog posts, comments, categories and authorization",
+    ],
+
+    stack: [
+      "Java",
+      "Spring Boot",
+      "Hibernate",
+      "MySQL",
+      "HTML",
+      "CSS",
+      "TypeScript",
+      "React",
+      "Tailwind",
+    ],
+    github: "https://github.com/Hargun22/Blog-Api-Backend",
+    image:
+      "https://hb-portfolio-bucket.s3.us-east-2.amazonaws.com/Personal+Blog.png",
   },
   {
     name: "Indeed Keyword Scraper",
